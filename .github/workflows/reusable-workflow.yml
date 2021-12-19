@@ -1,0 +1,21 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      password:
+        required: true
+
+jobs:
+  show:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Show data
+        run: |
+          echo ${{ inputs.username }}
+          echo ${{ secrets.password }}
