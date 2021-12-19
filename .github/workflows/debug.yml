@@ -1,0 +1,11 @@
+name: Debug workflow
+
+on: workflow_dispatch
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Print env variables
+        run: env | sort
