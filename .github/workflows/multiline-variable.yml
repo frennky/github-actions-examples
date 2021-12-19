@@ -1,0 +1,25 @@
+name: Multiline variable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        
+      - name: Set multiline env variable
+        run: |
+          echo 'MULTI<<EOF' >> $GITHUB_ENV
+          curl -s https://raw.githubusercontent.com/frennky/github-actions-examples/master/resources/test.json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Mask multiline env
+        run: |
+         while read -r line;
+         do
+           echo "::add-mask::${line}"
+         done <<< "${{ env.MULTI }}"
+
+      - name: Print multiline secret
+        run: echo -e "${{ env.MULTI }}"
