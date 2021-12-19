@@ -1,0 +1,20 @@
+name: Create PR
+
+on:
+  push:
+    branches:
+      - '!master'
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create PR
+        run: gh pr create --title "The fix" --body "This fixes the issue"
+        working-directory: ${{ github.workspace }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
