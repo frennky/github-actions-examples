@@ -1,0 +1,14 @@
+name: Run workflow on specific commit message
+
+on:
+  workflow_dispatch:
+
+jobs:
+ test:
+   runs-on: ubuntu-latest
+   steps:
+
+     - name: Run smoke tests
+       if: contains(github.event.head_commit.message, 'smoke_test')
+       run: |
+         echo 'Running smoke tests!'
