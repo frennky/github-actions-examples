@@ -1,0 +1,12 @@
+name: Run on PR comment
+
+on: issue_comment
+
+jobs:
+  pr:
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'ok') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: |
+          echo "It's OK!"
