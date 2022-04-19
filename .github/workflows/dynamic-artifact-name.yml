@@ -1,0 +1,19 @@
+name: Dynamic artifact name
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate artifact name
+        id: generate-name
+        run: |
+          echo "::set-output name=artifact::${{ github.event.repository.name }}.${{ github.ref_name }}.${{ github.run_id }}.zip"
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.generate-name.outputs.artifact }}
+          path: ./README.md
