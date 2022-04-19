@@ -1,7 +1,6 @@
 name: Run workflow on specific commit message
 
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
  test:
