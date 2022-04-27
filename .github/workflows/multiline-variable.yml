@@ -21,5 +21,10 @@ jobs:
            echo "::add-mask::${line}"
          done <<< "${{ env.MULTI }}"
 
-      - name: Print multiline secret
+      - name: Print multiline environment
         run: echo -e "${{ env.MULTI }}"
+        
+      - name: Echo multiline secret to file
+        run: |
+          echo ${{ secrets.multiline }} >> secret.json
+          cat secret.json
