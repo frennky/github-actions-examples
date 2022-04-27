@@ -26,5 +26,5 @@ jobs:
         
       - name: Echo multiline secret to file
         run: |
-          echo -e ${{ secrets.multiline }} >> secret.json
+          echo -e '${{ secrets.multiline }}' >> secret.json
           cat secret.json
