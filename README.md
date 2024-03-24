@@ -1,7 +1,9 @@
 # Github Actions examples
 
 ## General use cases:
-- Reusable workflow - [calling workflow](.github/workflows/calling-workflow.yml), [reusable workflow](.github/workflows/reusable-workflow.yml)
+- Reusable workflow
+  - [calling workflow](.github/workflows/calling-workflow.yml)
+  - [reusable workflow](.github/workflows/reusable-workflow.yml)
 - [Create PR on push](.github/workflows/create-pr.yml)
 - [Print environment variables](.github/workflows/print-env.yml)
 - [Dynamic artifact name](.github/workflows/dynamic-artifact-name.yml)
