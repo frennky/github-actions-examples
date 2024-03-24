@@ -19,3 +19,6 @@
 ## Helm
 - [Release Charts](https://github.com/frennky/lab/blob/master/.github/workflows/release-charts.yml)
 - [Lint and Test Charts](https://github.com/frennky/lab/blob/master/.github/workflows/test-charts.yml)
+
+## Ansible
+- [Ansible Lint](https://github.com/frennky/ansible-role-raspberry-pi/blob/master/.github/workflows/ansible-lint.yml)
