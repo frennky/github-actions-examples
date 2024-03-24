@@ -1,4 +1,4 @@
-name: Run workflow on specific commit message
+name: Run on specific commit message
 
 on: push
 
