@@ -1,4 +1,4 @@
-name: Run on PR comment
+name: Run on keyword in PR comment
 
 on: issue_comment
 
