@@ -15,3 +15,7 @@
 ## Golang
 - [Build and test](https://github.com/frennky/wol/blob/master/.github/workflows/build.yml)
 - [Lint](https://github.com/frennky/wol/blob/master/.github/workflows/lint.yml)
+
+## Helm
+- [Release Charts](https://github.com/frennky/lab/blob/master/.github/workflows/release-charts.yml)
+- [Lint and Test Charts](https://github.com/frennky/lab/blob/master/.github/workflows/test-charts.yml)
